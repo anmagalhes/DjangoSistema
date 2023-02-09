@@ -1,4 +1,3 @@
-
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -9,7 +8,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-#u92u^s#wac5z86jrf-f3-z3jb^k&o+%sq_#=7&#9tg1lem&zm'
+SECRET_KEY = (
+    'django-insecure-#u92u^s#wac5z86jrf-f3-z3jb^k&o+%sq_#=7&#9tg1lem&zm'
+)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -30,6 +31,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'myauth',
+    'core',
+    'cliente',
 ]
 
 MIDDLEWARE = [
