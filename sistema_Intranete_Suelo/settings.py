@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'myauth',
     'core',
     'cliente',
+    'perfil',
 ]
 
 MIDDLEWARE = [
