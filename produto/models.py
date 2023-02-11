@@ -13,7 +13,7 @@ class Produto(models.Model):
     nome = models.CharField(max_length=80)
     categoria = models.ForeignKey(Categoria, on_delete=models.SET_NULL, null="true")
     quantidade = models.FloatField()
-    
+
 
     def __str__(self) -> str:
-        return self.Produto
+        return self.nome
