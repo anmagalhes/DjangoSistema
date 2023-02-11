@@ -2,6 +2,9 @@ from django.db import models
 
 class Sexo(models.Model):
     SEXO_CHOICES = (
+        ("M","Masculino"),
+        ("F","Feminino"),
+        ("O","Outros"),
     ),
 
 class Cliente(models.Model):
