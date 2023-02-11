@@ -15,5 +15,14 @@ class Cliente(models.Model):
         null=True,
         blank=True, 
     )
+    sexo = models.CharField(
+        'sexo',
+        max_length=1,
+        null=False,
+        blank=False, 
+        choices = SEXO_CHOICES,
+        default='N',
+    )
+
 
 
