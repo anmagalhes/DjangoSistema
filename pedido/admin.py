@@ -1,6 +1,15 @@
+
 from django.contrib import admin
 from . import models
 
-admin.site.register(models.Pedido)
+class ItempedidoInline(admin.TabularInline):
+    model = models.Itempedido
+    extra =1
 
-# Register your models here.
+class PedidoAdmin(admin.ModelAdmin):
+    Inlines=[
+        ItempedidoInline
+    ]
+
+admin.site.register(models.Pedido, PedidoAdmin)
+admin.site.register(models.Itempedido)
