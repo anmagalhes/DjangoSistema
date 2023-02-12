@@ -7,9 +7,7 @@ class ItempedidoInline(admin.TabularInline):
     extra =1
 
 class PedidoAdmin(admin.ModelAdmin):
-    Inlines=[
-        ItempedidoInline
-    ]
+    Inlines = [ItempedidoInline]
 
 admin.site.register(models.Pedido, PedidoAdmin)
 admin.site.register(models.Itempedido)
