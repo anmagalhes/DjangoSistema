@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'perfil',
     'produto',
     'pedido',
+    'uf',
+    'cidade',
+    'municipio',
 ]
 
 MIDDLEWARE = [
