@@ -7,9 +7,9 @@ class Cliente(models.Model):
         ("O","Outros"),
     )
 
-    STATUSSITUACAO = (
+    STATUS_SITUACAO = (
         ("A","Ativo"),
-        ("I","Desativado"),
+        ("I","Inativo"),
     )
     
     nome = models.CharField(max_length=80)
@@ -24,27 +24,26 @@ class Cliente(models.Model):
         choices=SEXO_CHOICES,
         null=False,
         blank=False, 
-        default='N',
+        default='M',
     )
     profissao = models.CharField(
         max_length=80,
-        default='N',
+
     )
     email = models.EmailField(max_length=50)
     #uf = models.CharField(max_length=80)
     #cidade = models.CharField(max_length=80)
     #bairro = models.CharField(max_length=80)
     #logradouro = models.CharField(max_length=80)
-    dd = models.CharField(max_length=2)
     fixo = models.CharField(max_length=12)
-    numero_celula = models.CharField(max_length=9)
-    NumeroWhatazapp = models.CharField(max_length=9)
+    celular = models.CharField(max_length=11)
+    what = models.CharField(max_length=11)
     situacao =  models.CharField(
         max_length=1,
-        choices=STATUSSITUACAO,
+        choices=STATUS_SITUACAO,
         null=False,
         blank=False, 
-        default='N',
+        default='A',
     )
 
     def __str__(self) -> str:
