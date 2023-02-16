@@ -13,6 +13,17 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='pedido',
             name='statuspedido',
-            field=models.CharField(choices=[('A', 'Aprovado'), ('C', 'Criado'), ('E', 'Enviado'), ('F', 'Finalizado'), ('R', 'Reprovado'), ('p', 'Pendente')], default='C', max_length=1),
+            field=models.CharField(
+                choices=[
+                    ('A', 'Aprovado'),
+                    ('C', 'Criado'),
+                    ('E', 'Enviado'),
+                    ('F', 'Finalizado'),
+                    ('R', 'Reprovado'),
+                    ('p', 'Pendente'),
+                ],
+                default='C',
+                max_length=1,
+            ),
         ),
     ]

@@ -6,7 +6,10 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('cliente', '0005_cliente_numerowhatazapp_cliente_dd_cliente_email_and_more'),
+        (
+            'cliente',
+            '0005_cliente_numerowhatazapp_cliente_dd_cliente_email_and_more',
+        ),
     ]
 
     operations = [
@@ -42,11 +45,23 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='cliente',
             name='sexo',
-            field=models.CharField(choices=[('M', 'Masculino'), ('F', 'Feminino'), ('O', 'Outros')], default='M', max_length=1),
+            field=models.CharField(
+                choices=[
+                    ('M', 'Masculino'),
+                    ('F', 'Feminino'),
+                    ('O', 'Outros'),
+                ],
+                default='M',
+                max_length=1,
+            ),
         ),
         migrations.AlterField(
             model_name='cliente',
             name='situacao',
-            field=models.CharField(choices=[('A', 'Ativo'), ('I', 'Inativo')], default='A', max_length=1),
+            field=models.CharField(
+                choices=[('A', 'Ativo'), ('I', 'Inativo')],
+                default='A',
+                max_length=1,
+            ),
         ),
     ]

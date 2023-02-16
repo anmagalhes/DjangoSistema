@@ -16,6 +16,14 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='cliente',
             name='sexo',
-            field=models.CharField(choices=[('M', 'Masculino'), ('F', 'Feminino'), ('O', 'Outros')], default='N', max_length=1),
+            field=models.CharField(
+                choices=[
+                    ('M', 'Masculino'),
+                    ('F', 'Feminino'),
+                    ('O', 'Outros'),
+                ],
+                default='N',
+                max_length=1,
+            ),
         ),
     ]

@@ -6,13 +6,22 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('cliente', '0008_alter_cliente_celular_alter_cliente_datanascimento_and_more'),
+        (
+            'cliente',
+            '0008_alter_cliente_celular_alter_cliente_datanascimento_and_more',
+        ),
     ]
 
     operations = [
         migrations.AlterField(
             model_name='cliente',
             name='situacao',
-            field=models.CharField(choices=[('A', 'Ativo'), ('I', 'Inativo')], default='A', help_text='Escolha entre Ativo ou Inativo', max_length=1, verbose_name='Situação do cliente'),
+            field=models.CharField(
+                choices=[('A', 'Ativo'), ('I', 'Inativo')],
+                default='A',
+                help_text='Escolha entre Ativo ou Inativo',
+                max_length=1,
+                verbose_name='Situação do cliente',
+            ),
         ),
     ]

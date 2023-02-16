@@ -43,6 +43,10 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='cliente',
             name='situacao',
-            field=models.CharField(choices=[('A', 'Ativo'), ('I', 'Desativado')], default='N', max_length=1),
+            field=models.CharField(
+                choices=[('A', 'Ativo'), ('I', 'Desativado')],
+                default='N',
+                max_length=1,
+            ),
         ),
     ]

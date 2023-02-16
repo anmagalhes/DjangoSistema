@@ -1,9 +1,4 @@
 from django import path
 
 
-urlpatterns = [
-    
-
-]
-
-
+urlpatterns = []

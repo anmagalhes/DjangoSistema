@@ -13,27 +13,40 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='cliente',
             name='celular',
-            field=models.CharField(max_length=11, verbose_name='Numero de celular com o (DDD)'),
+            field=models.CharField(
+                max_length=11, verbose_name='Numero de celular com o (DDD)'
+            ),
         ),
         migrations.AlterField(
             model_name='cliente',
             name='datanascimento',
-            field=models.DateField(blank=True, null=True, verbose_name='Data de nascimento'),
+            field=models.DateField(
+                blank=True, null=True, verbose_name='Data de nascimento'
+            ),
         ),
         migrations.AlterField(
             model_name='cliente',
             name='fixo',
-            field=models.CharField(max_length=12, verbose_name='Numero de fixo com o (DDD)'),
+            field=models.CharField(
+                max_length=12, verbose_name='Numero de fixo com o (DDD)'
+            ),
         ),
         migrations.AlterField(
             model_name='cliente',
             name='nome',
-            field=models.CharField(max_length=80, verbose_name='Nome do cliente'),
+            field=models.CharField(
+                max_length=80, verbose_name='Nome do cliente'
+            ),
         ),
         migrations.AlterField(
             model_name='cliente',
             name='profissao',
-            field=models.CharField(blank=True, max_length=80, null=True, verbose_name='Profissão do Cliente'),
+            field=models.CharField(
+                blank=True,
+                max_length=80,
+                null=True,
+                verbose_name='Profissão do Cliente',
+            ),
         ),
         migrations.AlterField(
             model_name='cliente',
@@ -43,16 +56,32 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='cliente',
             name='sexo',
-            field=models.CharField(choices=[('M', 'Masculino'), ('F', 'Feminino'), ('O', 'Outros')], default='M', max_length=1, verbose_name='Sexo'),
+            field=models.CharField(
+                choices=[
+                    ('M', 'Masculino'),
+                    ('F', 'Feminino'),
+                    ('O', 'Outros'),
+                ],
+                default='M',
+                max_length=1,
+                verbose_name='Sexo',
+            ),
         ),
         migrations.AlterField(
             model_name='cliente',
             name='situacao',
-            field=models.CharField(choices=[('A', 'Ativo'), ('I', 'Inativo')], default='A', max_length=1, verbose_name='Situação do cliente'),
+            field=models.CharField(
+                choices=[('A', 'Ativo'), ('I', 'Inativo')],
+                default='A',
+                max_length=1,
+                verbose_name='Situação do cliente',
+            ),
         ),
         migrations.AlterField(
             model_name='cliente',
             name='what',
-            field=models.CharField(max_length=11, verbose_name='Contato do Whatzapp'),
+            field=models.CharField(
+                max_length=11, verbose_name='Contato do Whatzapp'
+            ),
         ),
     ]

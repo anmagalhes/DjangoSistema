@@ -6,7 +6,10 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('cliente', '0006_remove_cliente_numerowhatazapp_remove_cliente_dd_and_more'),
+        (
+            'cliente',
+            '0006_remove_cliente_numerowhatazapp_remove_cliente_dd_and_more',
+        ),
     ]
 
     operations = [
