@@ -54,6 +54,7 @@ class Cliente(models.Model):
         max_length=11)
     situacao =  models.CharField(
         'Situação do cliente',
+        help_text='Escolha entre Ativo ou Inativo',
         max_length=1,
         choices=STATUS_SITUACAO,
         null=False,
