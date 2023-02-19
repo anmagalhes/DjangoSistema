@@ -103,6 +103,14 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Configuração do Djano-Jazzmin
+JAZZMIN_SETTINGS = {
+
+    'site_title': 'Cadastro Intranet',
+    'site_header': 'Cadastro Intranet',
+    'site_brand': 'Cadastro Admin',
+}
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
