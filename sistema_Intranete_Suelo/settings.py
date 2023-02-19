@@ -109,7 +109,7 @@ JAZZMIN_SETTINGS = {
     'site_title': 'Cadastro Intranet',
     'site_header': 'Cadastro Intranet',
     'site_brand': 'Cadastro Admin',
-    'copyright': 'Tony Cadastro Intranet sob MIT License',
+    'copyright': 'Tony - Cadastro SueloPro sob MIT License',
 }
 
 JAZZMIN_UI_TWEAKS = {
