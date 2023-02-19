@@ -109,6 +109,7 @@ JAZZMIN_SETTINGS = {
     'site_title': 'Cadastro Intranet',
     'site_header': 'Cadastro Intranet',
     'site_brand': 'Cadastro Admin',
+    'copyright': 'Cadastro Intranet sob MIT License',
 }
 
 
