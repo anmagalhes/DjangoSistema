@@ -1,24 +1,18 @@
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 from myauth.models import *
 from myauth.views import *
-#from transacao.models import *
-#from transacao.views import *
-#from estoque.models import *
-#from estoque.views import *
+
 from django.contrib.auth import views as auth_views
-
-
 
 admin.site.site_header = "Cadastro Intranet"
 admin.site.site_title = "Cadastro Intranet"
 admin.site.index_title = "Cadastro Admin"
 
 urlpatterns = [
+    path('', include('core.urls')),
     path('admin/', admin.site.urls),
-
-    #path('', home, name="home",),
 
      #path("logout/", auth_views.LogoutView.as_view(template_name="logout.html"), name="logout"),
 
