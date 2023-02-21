@@ -1,18 +1,19 @@
 from django.db import models
 
 
+STATUS_SITUACAO = [
+                ('A', 'Ativo'),
+                ('I', 'Inativo'),
+
+    ]
+
+SEXO_CHOICES = [
+            ('M', 'Masculino'),
+            ('F', 'Feminino'),
+            ('O', 'Outros')
+    ]
+
 class Cliente(models.Model):
-    SEXO_CHOICES = (
-        ('M', 'Masculino'),
-        ('F', 'Feminino'),
-        ('O', 'Outros'),
-    )
-
-    STATUS_SITUACAO = (
-        ('A', 'Ativo'),
-        ('I', 'Inativo'),
-    )
-
     nome = models.CharField(
         'Nome do cliente', help_text='Nome Completo do Cliente', max_length=80
     )

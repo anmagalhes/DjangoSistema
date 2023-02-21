@@ -2,25 +2,46 @@ from django.db import models
 
 
 class Categoria(models.Model):
-    titulo = models.CharField(max_length=40)
+    titulo = models.CharField(
+        'Nome Categoria', 
+        help_text='Nome Completo Catergoria',    
+          max_length=40
+          )
 
+def __str__(self):
+    return self.Categoria.titulo
 
-def __str__(self) -> str:
-    return self.titulo
-
+    class Meta:
+        verbose_name = "Categoria"
+        verbose_name_plural = "Categorias"
+        db_table = "Categoria"
 
 class Produto(models.Model):
-    nome = models.CharField(max_length=255)
+    nome = models.CharField(
+         'Nome do Produto', 
+         help_text='Nome Completo Produto',  
+         max_length=255,
+         )
     categoria = models.ForeignKey(
-        Categoria, on_delete=models.SET_NULL, null='true'
+        Categoria,  
+        on_delete=models.SET_NULL, null='true'
+
     )
     quantidade = models.FloatField(
+        'Quantidade do produto',
+        help_text='Quantidade produto, Sem traços ou pontos',  
         default=0,
     )
 
 
-def __str__(self) -> str:
-    return self.nome
+class Meta:
+        verbose_name = "produto"
+        verbose_name_plural = "Produtos"
+        db_table = "Produto"
+
+
+def __str__(self):
+    return self.produto.nome
 
 
 # def gerar_desconto(self, desconto):
