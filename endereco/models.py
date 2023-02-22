@@ -101,3 +101,7 @@ class Endereco(models.Model):
         blank=False,
         default='CE',
     )
+
+    class Meta:
+        verbose_name = 'Endereço'
+        verbose_name_plural = 'Endereços'
