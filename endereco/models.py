@@ -102,6 +102,14 @@ class Endereco(models.Model):
         default='CE',
     )
 
+    Cep = models.CharField(
+        'Cep',
+        help_text='Cep da Residencia',
+        max_length=9,
+        null=False,
+        blank=False,
+    )
+
     class Meta:
         verbose_name = 'Endereço'
         verbose_name_plural = 'Endereços'
