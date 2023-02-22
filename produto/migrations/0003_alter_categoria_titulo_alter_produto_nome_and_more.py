@@ -13,16 +13,28 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='categoria',
             name='titulo',
-            field=models.CharField(help_text='Nome Completo Catergoria', max_length=40, verbose_name='Nome Categoria'),
+            field=models.CharField(
+                help_text='Nome Completo Catergoria',
+                max_length=40,
+                verbose_name='Nome Categoria',
+            ),
         ),
         migrations.AlterField(
             model_name='produto',
             name='nome',
-            field=models.CharField(help_text='Nome Completo Produto', max_length=255, verbose_name='Nome do Produto'),
+            field=models.CharField(
+                help_text='Nome Completo Produto',
+                max_length=255,
+                verbose_name='Nome do Produto',
+            ),
         ),
         migrations.AlterField(
             model_name='produto',
             name='quantidade',
-            field=models.FloatField(default=0, help_text='Somemente número sem ponto ou virgulas', verbose_name='Quantidade do produto'),
+            field=models.FloatField(
+                default=0,
+                help_text='Somemente número sem ponto ou virgulas',
+                verbose_name='Quantidade do produto',
+            ),
         ),
     ]

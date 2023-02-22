@@ -13,6 +13,10 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='produto',
             name='quantidade',
-            field=models.FloatField(default=0, help_text='Quantidade produto, Sem traços ou pontos', verbose_name='Quantidade do produto'),
+            field=models.FloatField(
+                default=0,
+                help_text='Quantidade produto, Sem traços ou pontos',
+                verbose_name='Quantidade do produto',
+            ),
         ),
     ]

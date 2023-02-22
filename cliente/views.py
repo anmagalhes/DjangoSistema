@@ -3,22 +3,19 @@ from cliente.models import *
 from cliente.forms import *
 import datetime
 
+
 def cadastrar_cliente(request):
     form = ClienteForm()
 
-    if request.method == "POST":
+    if request.method == 'POST':
         form = ClienteForm(request.POST)
 
         if form.is_valid():
 
             form.save()
 
-            return redirect("cadastrar_cliente")
+            return redirect('cadastrar_cliente')
 
-    context = {
+    context = {'nome_pagina': 'Cadastrar Cliente', 'form': form}
 
-        "nome_pagina": "Cadastrar Cliente",
-        "form": form
-    }
-
-    return render(request, "cadastrar_cliente.html", context)
+    return render(request, 'cadastrar_cliente.html', context)

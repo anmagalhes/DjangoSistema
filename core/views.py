@@ -1,12 +1,11 @@
-from django.shortcuts import  render, redirect
+from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 
-#@login_required
+# @login_required
 def home(request):
 
     context = {
-
-        "home": home,
+        'home': home,
     }
 
-    return render(request, "core/index.html", context)
+    return render(request, 'core/index.html', context)

@@ -13,32 +13,55 @@ class PessoaForm(forms.ModelForm):
     class Meta:
         model = Pessoa
         fields = [
-            "nome", "pais", "cpf", "estado", "cidade", "cep",
-            "bairro", "logradouro", "numero", "telefone", "email", "naturalidade", "escolaridade",
-            "status", "telefone", "nascimento", "estado_civil", "profissao", "telefone_celular", "estado_civil", "password"
-
+            'nome',
+            'pais',
+            'cpf',
+            'estado',
+            'cidade',
+            'cep',
+            'bairro',
+            'logradouro',
+            'numero',
+            'telefone',
+            'email',
+            'naturalidade',
+            'escolaridade',
+            'status',
+            'telefone',
+            'nascimento',
+            'estado_civil',
+            'profissao',
+            'telefone_celular',
+            'estado_civil',
+            'password',
         ]
 
 
 class GerenteForm(forms.ModelForm):
-
     class Meta:
         model = Gerente
-        fields = ('__all__')
+        fields = '__all__'
 
 
 class EmpresaForm(forms.ModelForm):
-
     class Meta:
         model = Empresa
         fields = [
-            "nome", "pais", "cnpj", "cep", "estado", "cidade",
-            "bairro", "logradouro", "numero_da_casa", "telefone", "email",
+            'nome',
+            'pais',
+            'cnpj',
+            'cep',
+            'estado',
+            'cidade',
+            'bairro',
+            'logradouro',
+            'numero_da_casa',
+            'telefone',
+            'email',
         ]
 
 
 class VendedorForm(forms.ModelForm):
-
     class Meta:
         model = Vendedor
-        fields = ('__all__')
+        fields = '__all__'
