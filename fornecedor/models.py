@@ -82,6 +82,7 @@ class Fornecedor(models.Model):
         default='A',
     )
 
-    def __str__(self) -> str:
-        return self.nome
 
+class Meta:
+        verbose_name = 'Fornecedors'
+        verbose_name_plural = 'Fornecedores'
