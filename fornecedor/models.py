@@ -14,12 +14,14 @@ class Fornecedor(models.Model):
         'Número do CPF',
         help_text='Número do CPF, Sem traços ou pontos',
         max_length=15,
+        blank = True,
     )
 
     CNPJ = models.CharField(
         'Número do CNPJ',
         help_text='Número do CNPJ, Sem traços ou pontos',
         max_length=20,
+        blank = True,
     )
     rg = models.CharField(
         'RG', help_text='RG Sem traços ou pontos', max_length=15
