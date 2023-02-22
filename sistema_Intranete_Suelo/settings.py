@@ -105,7 +105,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Configuração do Djano-Jazzmin
 JAZZMIN_SETTINGS = {
-
+    'site_logo': 'img/logo_suelo.png',
     'site_title': 'Cadastro Intranet',
     'site_header': 'Cadastro Intranet',
     'site_brand': 'Cadastro Admin',
