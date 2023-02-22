@@ -13,4 +13,14 @@ LOGRADOURO_CHOICES = [
 
 # Create your models here.
 class Endereco(models.Model):
-    pass
+    Logradouro =  models.CharField(
+          'Logradouro',
+        help_text='teste',
+        max_length=9,
+        choices= LOGRADOURO_CHOICES,
+        null=False,
+        blank=False,
+        default='Rua'
+    )
+
+   
