@@ -13,7 +13,12 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='endereco',
             name='Cep',
-            field=models.CharField(default='', help_text='Cep da Residencia', max_length=9, verbose_name='Cep'),
+            field=models.CharField(
+                default='',
+                help_text='Cep da Residencia',
+                max_length=9,
+                verbose_name='Cep',
+            ),
             preserve_default=False,
         ),
     ]

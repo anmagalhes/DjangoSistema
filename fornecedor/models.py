@@ -6,12 +6,6 @@ STATUS_SITUACAO = [
     ('I', 'Inativo'),
 ]
 
-SEXO_CHOICES = [
-    ('M', 'Masculino'), 
-    ('F', 'Feminino'), 
-    ('O', 'Outros')]
-
-
 class Fornecedor(models.Model):
     nome = models.CharField(
         'Nome do Fornecedor', help_text='Nome Completo do Fornecedor', max_length=80
@@ -20,6 +14,12 @@ class Fornecedor(models.Model):
         'Número do CPF',
         help_text='Número do CPF, Sem traços ou pontos',
         max_length=15,
+    )
+
+    CNPJ = models.CharField(
+        'Número do CNPJ',
+        help_text='Número do CNPJ, Sem traços ou pontos',
+        max_length=20,
     )
     rg = models.CharField(
         'RG', help_text='RG Sem traços ou pontos', max_length=15
@@ -30,22 +30,7 @@ class Fornecedor(models.Model):
         null=True,
         blank=True,
     )
-    sexo = models.CharField(
-        'Sexo',
-        help_text='Escolha umas das opções',
-        max_length=1,
-        choices=SEXO_CHOICES,
-        null=False,
-        blank=False,
-        default='M',
-    )
-    profissao = models.CharField(
-        'Profissão do Fornecedor',
-        help_text='Profissão Auto Declarada do Fornecedor',
-        max_length=80,
-        blank=True,
-        null=True,
-    )
+
     email = models.EmailField(
         'E-mail de Contato', help_text='Digite o E-mail válido', max_length=50
     )
@@ -81,8 +66,7 @@ class Fornecedor(models.Model):
         blank=False,
         default='A',
     )
-
-
+    
 class Meta:
         verbose_name = 'Fornecedors'
         verbose_name_plural = 'Fornecedores'

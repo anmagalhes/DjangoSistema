@@ -12,6 +12,9 @@ class Migration(migrations.Migration):
     operations = [
         migrations.AlterModelOptions(
             name='endereco',
-            options={'verbose_name': 'Endereço', 'verbose_name_plural': 'Endereços'},
+            options={
+                'verbose_name': 'Endereço',
+                'verbose_name_plural': 'Endereços',
+            },
         ),
     ]
