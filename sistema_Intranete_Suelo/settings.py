@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'pedido',
     'endereco',
     'estoque',
+    'funcionario',
+    'departamento',
 ]
 
 MIDDLEWARE = [
