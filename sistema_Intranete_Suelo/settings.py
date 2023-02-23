@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'pedido',
     'endereco',
     'estoque',
+    'Controle_rh,
+    'Controle_rh.departamento',
 ]
 
 MIDDLEWARE = [
