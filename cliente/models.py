@@ -11,24 +11,22 @@ SEXO_CHOICES = [('M', 'Masculino'), ('F', 'Feminino'), ('O', 'Outros')]
 
 class Cliente(models.Model):
     nome = models.CharField(
-        'Nome do cliente', help_text='Nome Completo do Cliente', max_length=80, verbose_name='nome',
+        'Nome do cliente', help_text='Nome Completo do Cliente', max_length=80
     )
     Cpf = models.CharField(
         'Número do CPF',
         help_text='Número do CPF, Sem traços ou pontos',
-        max_length=15,
-        verbose_name='CPF',
+        max_length=15
     )
     rg = models.CharField(
         'RG', help_text='RG Sem traços ou pontos',
-        max_length=15, verbose_name='RG',
+        max_length=15
     )
     datanascimento = models.DateField(
         'Data de nascimento',
         help_text='Data de Nascimento do cliente',
         null=True,
-        blank=True,
-        verbose_name='Data de nascimento',
+        blank=True
     )
     sexo = models.CharField(
         'Sexo',
@@ -37,23 +35,19 @@ class Cliente(models.Model):
         choices=SEXO_CHOICES,
         null=False,
         blank=False,
-        default='M',
-        verbose_name='sexo',
-
+        default='M'
     )
     profissao = models.CharField(
         'Profissão do Cliente',
         help_text='Profissão Auto Declarada do Cliente',
         max_length=80,
         blank=True,
-        null=True,
-        verbose_name='profissao',
+        null=True
     )
     email = models.EmailField(
         'E-mail de Contato',
         help_text='Digite o E-mail válido',
-        max_length=50,
-        verbose_name='email',
+        max_length=50
     )
     # uf = models.CharField(max_length=80)
     # cidade = models.CharField(max_length=80)
@@ -62,24 +56,21 @@ class Cliente(models.Model):
     fixo = models.CharField(
         'Numero de fixo com o (DDD)',
         help_text='Número Fixo apenas número Sem traços ou parentes',
-        max_length=12,
-        verbose_name='fixo',
+        max_length=12
     )
     celular = models.CharField(
         'Numero de celular com o (DDD)',
         help_text='Número do celular com o DDD Sem traços ou parentes',
         max_length=11,
         blank=True,
-        null=True,
-        verbose_name='celular',
+        null=True
     )
     what = models.CharField(
         'Contato do Whatzapp',
         help_text='Número de contato para o Whatzapp',
         max_length=11,
         blank=True,
-        null=True,
-        verbose_name='what',
+        null=True
     )
     situacao = models.CharField(
         'Situação do cliente',
@@ -88,9 +79,8 @@ class Cliente(models.Model):
         choices=STATUS_SITUACAO,
         null=False,
         blank=False,
-        default='A',
-        verbose_name='situacao',
+        default='A'
     )
 
-    def __str__(self)
-    return self.nome
+    def __str__(self):
+        return self.nome
