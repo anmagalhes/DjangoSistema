@@ -1,13 +1,11 @@
 from django.db import models
 
-
 STATUS_SITUACAO = [
     ('A', 'Ativo'),
     ('I', 'Inativo'),
 ]
 
 SEXO_CHOICES = [('M', 'Masculino'), ('F', 'Feminino'), ('O', 'Outros')]
-
 
 class Cliente(models.Model):
     nome = models.CharField(
