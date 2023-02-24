@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'estoque',
     'funcionario',
     'departamento',
+    'documentos_rh',
+    'registro_horaextrar_rh',
 ]
 
 MIDDLEWARE = [
