@@ -9,14 +9,14 @@ STATUS_SITUACAO = [
 SEXO_CHOICES = [('M', 'Masculino'), ('F', 'Feminino'), ('O', 'Outros')]
 
 
-class Funcioanrio(models.Model):
+class Funcionario(models.Model):
 
     nome = models.CharField(
         'Nome do cliente', help_text='Nome Completo do Cliente', max_length=80
     )
-    
-    #user = models.ForeignKey(UserProfile, on_delete=models.PROTECT,
-    #departamentos = modes.ManyTOField(Departamento))
+
+    # user = models.ForeignKey(UserProfile, on_delete=models.PROTECT,
+    # departamentos = modes.ManyTOField(Departamento))
 
     Cpf = models.CharField(
         'Número do CPF',
@@ -54,10 +54,7 @@ class Funcioanrio(models.Model):
         help_text='Digite o E-mail válido',
         max_length=50
     )
-    # uf = models.CharField(max_length=80)
-    # cidade = models.CharField(max_length=80)
-    # bairro = models.CharField(max_length=80)
-    # logradouro = models.CharField(max_length=80)
+
     fixo = models.CharField(
         'Numero de fixo com o (DDD)',
         help_text='Número Fixo apenas número Sem traços ou parentes',
@@ -87,13 +84,12 @@ class Funcioanrio(models.Model):
         default='A'
     )
 
-
-    
     class Meta:
         ordering = ['nome']
 
     def __str__(self):
         return self.Funcioanrio.nome
+
 
 class Meta:
     verbose_name = 'funcionario'
