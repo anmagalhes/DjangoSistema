@@ -1,5 +1,6 @@
 from django.db import models
-from django.contrib.auth.models import User
+#from django.contrib.auth.models import User
+from departamento.models import Departamento
 
 STATUS_SITUACAO = [
     ('A', 'Ativo'),
@@ -14,10 +15,8 @@ class Funcionario(models.Model):
     nome = models.CharField(
         'Nome do cliente', help_text='Nome Completo do Cliente', max_length=80
     )
-
-    # user = models.ForeignKey(UserProfile, on_delete=models.PROTECT,
-    # departamentos = modes.ManyTOField(Departamento))
-
+    #user = models.ForeignKey(User, on_delete=models.PROTECT)
+    departamentos = models.ManyToManyField(Departamento)
     Cpf = models.CharField(
         'Número do CPF',
         help_text='Número do CPF, Sem traços ou pontos',
