@@ -2,7 +2,15 @@ from django.db import models
 
 
 class Departamento(models.Model):
-    pass
+    nome = models.CharField(
+        'Nome do Departamento',
+        help_text='Nome Completo do Departanento',
+        max_length=80
+    )
+
+
+def __str__(self):
+    return self.Departamento.nome
 
 
 class Meta:
