@@ -5,7 +5,7 @@ class Departamento(models.Model):
     nome = models.CharField(
         'Nome do Departamento',
         help_text='Nome Completo do Departanento',
-        max_length=80
+        max_length=80,
     )
 
 

@@ -21,7 +21,12 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='fornecedor',
             name='CNPJ',
-            field=models.CharField(default='', help_text='Número do CNPJ, Sem traços ou pontos', max_length=20, verbose_name='Número do CNPJ'),
+            field=models.CharField(
+                default='',
+                help_text='Número do CNPJ, Sem traços ou pontos',
+                max_length=20,
+                verbose_name='Número do CNPJ',
+            ),
             preserve_default=False,
         ),
     ]

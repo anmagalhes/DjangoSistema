@@ -13,7 +13,12 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='departamento',
             name='nome',
-            field=models.CharField(default='', help_text='Nome Completo do Departanento', max_length=80, verbose_name='Nome do Departamento'),
+            field=models.CharField(
+                default='',
+                help_text='Nome Completo do Departanento',
+                max_length=80,
+                verbose_name='Nome do Departamento',
+            ),
             preserve_default=False,
         ),
     ]

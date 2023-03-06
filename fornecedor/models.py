@@ -6,22 +6,25 @@ STATUS_SITUACAO = [
     ('I', 'Inativo'),
 ]
 
+
 class Fornecedor(models.Model):
     nome = models.CharField(
-        'Nome do Fornecedor', help_text='Nome Completo do Fornecedor', max_length=80
+        'Nome do Fornecedor',
+        help_text='Nome Completo do Fornecedor',
+        max_length=80,
     )
     CPF = models.CharField(
         'Número do CPF',
         help_text='Número do CPF, Sem traços ou pontos',
         max_length=15,
-        blank = True,
+        blank=True,
     )
 
     CNPJ = models.CharField(
         'Número do CNPJ',
         help_text='Número do CNPJ, Sem traços ou pontos',
         max_length=20,
-        blank = True,
+        blank=True,
     )
     rg = models.CharField(
         'RG', help_text='RG Sem traços ou pontos', max_length=15
@@ -68,7 +71,8 @@ class Fornecedor(models.Model):
         blank=False,
         default='A',
     )
-    
+
+
 class Meta:
-        verbose_name = 'Fornecedors'
-        verbose_name_plural = 'Fornecedores'
+    verbose_name = 'Fornecedors'
+    verbose_name_plural = 'Fornecedores'
