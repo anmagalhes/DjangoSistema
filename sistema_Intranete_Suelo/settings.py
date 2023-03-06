@@ -36,14 +36,11 @@ INSTALLED_APPS = [
     'cliente',
     'fornecedor',
     'perfil',
-    'produto',
     'pedido',
     'endereco',
     'estoque',
     'funcionario',
     'departamento',
-    'documentos_rh',
-    'registro_horaextrar_rh',
 ]
 
 MIDDLEWARE = [
