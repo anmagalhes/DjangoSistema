@@ -1,13 +1,10 @@
-up: ## Starts ALL containers in the project
-	docker-compose up -d
+indenter:
+	find backend -name "*.html" | xargs djhtml -t 2
 
-indenter: ## Automatically indenter djhtml
-	find backend -name "*.html" | xargs djhtml -t 2 -i
-
-autopep8: ## Automatically formats Python code to conform to the PEP 8 style guide
+autopep8:
 	find backend -name "*.py" | xargs autopep8 --max-line-length 120 --in-place
 
-isort: ## Organizing the imports
-	isort -m 3 . --skip .venv
+isort:
+	isort -m 3 * --skip migrations --skip .venv
 
-lint: autopep8 isort indenter ## Run isort, autopep8 and indenter
+lint: autopep8 isort indenter

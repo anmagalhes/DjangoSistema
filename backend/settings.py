@@ -24,6 +24,7 @@ INSTALLED_APPS = [
     # apps de terceiros
     'django_extensions',
     # minhas apps
+    'backend.accounts',
     'backend.core',
     'backend.cliente',
     'backend.departamento',
@@ -135,3 +136,7 @@ MEDIA_ROOT = BASE_DIR / 'static/user'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+LOGIN_REDIRECT_URL = 'core:index'
+LOGOUT_REDIRECT_URL = 'core:index'
