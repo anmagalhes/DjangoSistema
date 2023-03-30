@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User
 from django.db import models
+from django.urls import reverse_lazy
 
 
 class Pedido(models.Model):
@@ -26,6 +27,13 @@ class Pedido(models.Model):
 
     def __str__(self) -> str:
         return f'Pedido N. {self.pk}'
+
+    @property
+    def update_url(self):
+        if self.pk:
+            kw = {'pk': self.pk}
+            return reverse_lazy('pedido:pedido_update', kwargs=kw)
+        return None
 
 
 class Itempedido(models.Model):

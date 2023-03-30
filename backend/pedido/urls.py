@@ -8,6 +8,7 @@ app_name = 'pedido'
 pedido_urlpatterns = [
     path('', v.pedido_list, name='pedido_list'),
     path('create/', v.PedidoCreateView.as_view(), name='pedido_create'),
+    path('<int:pk>/update/', v.PedidoUpdateView.as_view(), name='pedido_update'),
 ]
 
 

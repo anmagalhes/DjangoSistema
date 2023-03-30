@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy
-from django.views.generic import CreateView
+from django.views.generic import CreateView, UpdateView
 
 from .forms import FornecedorForm
 from .models import Fornecedor
@@ -14,6 +14,12 @@ def fornecedor_list(request):
 
 
 class FornecedorCreateView(CreateView):
+    model = Fornecedor
+    form_class = FornecedorForm
+    success_url = reverse_lazy('fornecedor:fornecedor_list')
+
+
+class FornecedorUpdateView(UpdateView):
     model = Fornecedor
     form_class = FornecedorForm
     success_url = reverse_lazy('fornecedor:fornecedor_list')

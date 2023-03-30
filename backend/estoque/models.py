@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse_lazy
 
 
 class Categoria(models.Model):
@@ -12,6 +13,13 @@ class Categoria(models.Model):
 
     def __str__(self):
         return self.titulo
+
+    @property
+    def update_url(self):
+        if self.pk:
+            kw = {'pk': self.pk}
+            return reverse_lazy('estoque:categoria_update', kwargs=kw)
+        return None
 
 
 class Produto(models.Model):
@@ -36,6 +44,13 @@ class Produto(models.Model):
     def __str__(self):
         return self.nome
 
+    @property
+    def update_url(self):
+        if self.pk:
+            kw = {'pk': self.pk}
+            return reverse_lazy('estoque:produto_update', kwargs=kw)
+        return None
+
 
 class Estoque(models.Model):
     produto = models.ForeignKey(Produto, on_delete=models.CASCADE)
@@ -47,3 +62,10 @@ class Estoque(models.Model):
 
     def __str__(self):
         return self.produto.nome
+
+    @property
+    def update_url(self):
+        if self.pk:
+            kw = {'pk': self.pk}
+            return reverse_lazy('estoque:estoque_update', kwargs=kw)
+        return None

@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User
 from django.db import models
+from django.urls import reverse_lazy
 
 from backend.departamento.models import Departamento
 
@@ -88,6 +89,13 @@ class Funcionario(models.Model):
     def __str__(self):
         return self.nome
 
+    @property
+    def update_url(self):
+        if self.pk:
+            kw = {'pk': self.pk}
+            return reverse_lazy('funcionario:funcionario_update', kwargs=kw)
+        return None
+
 
 class Documento(models.Model):
     descricao = models.CharField(
@@ -102,6 +110,13 @@ class Documento(models.Model):
 
     def __str__(self):
         return self.descricao
+
+    @property
+    def update_url(self):
+        if self.pk:
+            kw = {'pk': self.pk}
+            return reverse_lazy('funcionario:documento_update', kwargs=kw)
+        return None
 
 
 class HoraExtraFuncionario(models.Model):
@@ -127,3 +142,10 @@ class HoraExtraFuncionario(models.Model):
 
     def __str__(self):
         return self.motivo
+
+    @property
+    def update_url(self):
+        if self.pk:
+            kw = {'pk': self.pk}
+            return reverse_lazy('funcionario:hora_extra_update', kwargs=kw)
+        return None

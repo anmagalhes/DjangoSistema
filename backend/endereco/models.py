@@ -1,43 +1,7 @@
 from django.db import models
+from django.urls import reverse_lazy
 
-LOGRADOURO_CHOICES = [
-    ('Rua', 'Rua'),
-    ('Avenida', 'Avenida'),
-    ('Praca', 'Praca'),
-    ('Estrada', 'Estrada'),
-    ('Travessa', 'Travessa'),
-    ('Viela', 'Viela'),
-    ('Passagem', 'Passagem'),
-]
-
-ESTADO_CHOICES = [
-    ('AC', 'AC'),
-    ('AP', 'AM'),
-    ('AM', 'AM'),
-    ('BA', 'BA'),
-    ('CE', 'CE'),
-    ('DF', 'DF'),
-    ('ES', 'ES'),
-    ('GO', 'GO'),
-    ('MA', 'MA'),
-    ('MT', 'MT'),
-    ('MS', 'MS'),
-    ('MG', 'MG'),
-    ('PA', 'PA'),
-    ('PB', 'PB'),
-    ('PR', 'PR'),
-    ('PE', 'PE'),
-    ('PI', 'PI'),
-    ('RJ', 'RJ'),
-    ('RN', 'RN'),
-    ('RS', 'RS'),
-    ('RO', 'RO'),
-    ('RR', 'RR'),
-    ('SC', 'SC'),
-    ('SP', 'SP'),
-    ('SE', 'SE'),
-    ('TO', 'TO'),
-]
+from .constants import ESTADO_CHOICES, LOGRADOURO_CHOICES
 
 
 class Endereco(models.Model):
@@ -115,3 +79,10 @@ class Endereco(models.Model):
 
     def __str__(self):
         return self.logradouro
+
+    @property
+    def update_url(self):
+        if self.pk:
+            kw = {'pk': self.pk}
+            return reverse_lazy('endereco:endereco_update', kwargs=kw)
+        return None

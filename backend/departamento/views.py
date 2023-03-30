@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy
-from django.views.generic import CreateView
+from django.views.generic import CreateView, UpdateView
 
 from .forms import DepartamentoForm
 from .models import Departamento
@@ -14,6 +14,12 @@ def departamento_list(request):
 
 
 class DepartamentoCreateView(CreateView):
+    model = Departamento
+    form_class = DepartamentoForm
+    success_url = reverse_lazy('departamento:departamento_list')
+
+
+class DepartamentoUpdateView(UpdateView):
     model = Departamento
     form_class = DepartamentoForm
     success_url = reverse_lazy('departamento:departamento_list')

@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy
-from django.views.generic import CreateView
+from django.views.generic import CreateView, UpdateView
 
 from .forms import EnderecoForm
 from .models import Endereco
@@ -14,6 +14,12 @@ def endereco_list(request):
 
 
 class EnderecoCreateView(CreateView):
+    model = Endereco
+    form_class = EnderecoForm
+    success_url = reverse_lazy('endereco:endereco_list')
+
+
+class EnderecoUpdateView(UpdateView):
     model = Endereco
     form_class = EnderecoForm
     success_url = reverse_lazy('endereco:endereco_list')

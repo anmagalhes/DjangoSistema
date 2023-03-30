@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy
-from django.views.generic import CreateView
+from django.views.generic import CreateView, UpdateView
 
 from .forms import ClienteForm
 from .models import Cliente
@@ -14,6 +14,12 @@ def cliente_list(request):
 
 
 class ClienteCreateView(CreateView):
+    model = Cliente
+    form_class = ClienteForm
+    success_url = reverse_lazy('cliente:cliente_list')
+
+
+class ClienteUpdateView(UpdateView):
     model = Cliente
     form_class = ClienteForm
     success_url = reverse_lazy('cliente:cliente_list')

@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse_lazy
 
 
 class Departamento(models.Model):
@@ -14,3 +15,10 @@ class Departamento(models.Model):
 
     def __str__(self):
         return self.nome
+
+    @property
+    def update_url(self):
+        if self.pk:
+            kw = {'pk': self.pk}
+            return reverse_lazy('departamento:departamento_update', kwargs=kw)
+        return None
