@@ -9,8 +9,6 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', default=[], cast=Csv())
 
-AUTH_USER_MODEL = 'myauth.User'
-
 
 # Application definition
 
@@ -25,16 +23,15 @@ INSTALLED_APPS = [
     # apps de terceiros
     'django_extensions',
     # minhas apps
-    'myauth',
-    'core',
-    'cliente',
-    'fornecedor',
-    'perfil',
-    'pedido',
-    'endereco',
-    'estoque',
-    'funcionario',
-    'departamento',
+    'backend.core',
+    'backend.cliente',
+    'backend.departamento',
+    'backend.endereco',
+    'backend.estoque',
+    'backend.fornecedor',
+    'backend.funcionario',
+    'backend.pedido',
+    'backend.perfil',
 ]
 
 MIDDLEWARE = [
@@ -47,7 +44,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'sistema_Intranete_Suelo.urls'
+ROOT_URLCONF = 'backend.urls'
 
 TEMPLATES = [
     {
@@ -65,7 +62,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'sistema_Intranete_Suelo.wsgi.application'
+WSGI_APPLICATION = 'backend.wsgi.application'
 
 
 # Database

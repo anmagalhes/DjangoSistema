@@ -1,16 +1,14 @@
 from django.contrib import admin
 
-from . import models
+from .models import Itempedido, Pedido
 
 
 class ItempedidoInline(admin.TabularInline):
-    model = models.Itempedido
+    model = Itempedido
     extra = 1
 
 
+@admin.register(Pedido)
 class PedidoAdmin(admin.ModelAdmin):
     Inlines = [ItempedidoInline]
-
-
-admin.site.register(models.Pedido, PedidoAdmin)
-admin.site.register(models.Itempedido)
+    list_display = ('__str__',)

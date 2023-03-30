@@ -1,4 +1,4 @@
-from departamento.models import Departamento
+from backend.departamento.models import Departamento
 from django.contrib.auth.models import User
 from django.db import models
 

@@ -1,5 +1,4 @@
 from django.db import models
-from myauth.models import *
 
 
 class Categoria(models.Model):
@@ -7,9 +6,8 @@ class Categoria(models.Model):
         'Nome Categoria', help_text='Nome Completo Catergoria', max_length=40
     )
 
-
-def __str__(self):
-    return self.Categoria.titulo
+    def __str__(self):
+        return self.Categoria.titulo
 
 
 class Produto(models.Model):
@@ -27,9 +25,8 @@ class Produto(models.Model):
         default=0,
     )
 
-
-def __str__(self):
-    return self.produto.nome
+    def __str__(self):
+        return self.produto.nome
 
 
 class ProdutoEstoque(models.Model):

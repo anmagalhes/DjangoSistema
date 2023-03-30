@@ -1,4 +1,4 @@
-from cliente.models import *
+from .models import Cliente
 from django import forms
 
 
