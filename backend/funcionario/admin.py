@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Funcionario, DocumentosRH, HoraExtraFuncionario
+from .models import DocumentosRH, Funcionario, HoraExtraFuncionario
 
 
 @admin.register(Funcionario)

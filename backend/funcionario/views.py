@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from .models import Funcionario, DocumentosRH, HoraExtraFuncionario
+
+from .models import DocumentosRH, Funcionario, HoraExtraFuncionario
 
 
 def documento_list(request):

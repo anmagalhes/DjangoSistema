@@ -14,7 +14,7 @@
             <div class="col-md-auto">
               <a class="btn btn-primary" href="{% url 'core:create' %}">
                 <i class="fa fa-plus"></i>
-                Add
+                Adicionar
               </a>
             </div>
             <div class="col">
@@ -44,21 +44,21 @@
             </thead>
             <tbody>
               {% for object in object_list %}
-              <tr>
-                <td>
-                  <a href="">{{ object }}</a>
-                </td>
-                <td>2022/01/01</td>
-                <td>Member</td>
-                <td class="text-center">
-                  <span class="badge bg-success">Active</span>
-                </td>
-                <td class="text-center">
-                  <a href="">
-                    <i class="fa fa-edit"></i>
-                  </a>
-                </td>
-              </tr>
+                <tr>
+                  <td>
+                    <a href="">{{ object }}</a>
+                  </td>
+                  <td>2022/01/01</td>
+                  <td>Member</td>
+                  <td class="text-center">
+                    <span class="badge bg-success">Active</span>
+                  </td>
+                  <td class="text-center">
+                    <a href="">
+                      <i class="fa fa-edit"></i>
+                    </a>
+                  </td>
+                </tr>
               {% endfor %}
             </tbody>
           </table>
