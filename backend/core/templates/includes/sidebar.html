@@ -70,19 +70,19 @@
 
     <li class="nav-title">Funcionários</li>
     <li class="nav-item">
-      <a class="nav-link" href="">
+      <a class="nav-link" href="{% url 'funcionario:documento_list' %}">
         <svg class="nav-icon">
           <use xlink:href="{% static 'assets/icons/coreui/sprites/free.svg' %}#cil-drop"></use>
         </svg> Documentos</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="">
+      <a class="nav-link" href="{% url 'funcionario:funcionario_list' %}">
         <svg class="nav-icon">
           <use xlink:href="{% static 'assets/icons/coreui/sprites/free.svg' %}#cil-drop"></use>
         </svg> Funcionários</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="">
+      <a class="nav-link" href="{% url 'funcionario:hora_extra_list' %}">
         <svg class="nav-icon">
           <use xlink:href="{% static 'assets/icons/coreui/sprites/free.svg' %}#cil-drop"></use>
         </svg> Horas extra</a>

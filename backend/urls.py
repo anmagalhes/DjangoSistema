@@ -14,5 +14,6 @@ urlpatterns = [
     path('endereco/', include('backend.endereco.urls', namespace='endereco')),
     path('estoque/', include('backend.estoque.urls', namespace='estoque')),
     path('fornecedor/', include('backend.fornecedor.urls', namespace='fornecedor')),
+    path('funcionario/', include('backend.funcionario.urls', namespace='funcionario')),
     path('admin/', admin.site.urls),
 ]
