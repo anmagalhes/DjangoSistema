@@ -17,7 +17,7 @@ class Funcionario(models.Model):
     )
     # user = models.OneToOneField(User, on_delete=models.PROTECT)
     departamentos = models.ManyToManyField(Departamento)
-    Cpf = models.CharField(
+    cpf = models.CharField(
         'Número do CPF',
         help_text='Número do CPF, Sem traços ou pontos',
         max_length=15,
@@ -112,7 +112,7 @@ class HoraExtra_Funcionario(models.Model):
         null=False,
         blank=False,
     )
-    Logradouro = models.CharField(
+    logradouro = models.CharField(
         'Logradouro',
         help_text='Nome do Logradouro',
         max_length=9,
@@ -124,3 +124,6 @@ class HoraExtra_Funcionario(models.Model):
     class Meta:
         verbose_name = 'hora extra'
         verbose_name_plural = 'horas extra'
+
+    def __str__(self):
+        return self.motivo
