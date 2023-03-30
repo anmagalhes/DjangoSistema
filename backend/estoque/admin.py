@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Categoria, Produto, ProdutoEstoque
+from .models import Categoria, Produto, Estoque
 
 
 @admin.register(Categoria)
@@ -13,6 +13,6 @@ class ProdutoAdmin(admin.ModelAdmin):
     list_display = ('__str__',)
 
 
-@admin.register(ProdutoEstoque)
-class ProdutoEstoqueAdmin(admin.ModelAdmin):
+@admin.register(Estoque)
+class EstoqueAdmin(admin.ModelAdmin):
     list_display = ('__str__',)

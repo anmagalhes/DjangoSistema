@@ -42,19 +42,19 @@
 
     <li class="nav-title">Estoque</li>
     <li class="nav-item">
-      <a class="nav-link" href="">
+      <a class="nav-link" href="{% url 'estoque:categoria_list' %}">
         <svg class="nav-icon">
           <use xlink:href="{% static 'assets/icons/coreui/sprites/free.svg' %}#cil-drop"></use>
         </svg> Categorias</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="">
+      <a class="nav-link" href="{% url 'estoque:estoque_list' %}">
         <svg class="nav-icon">
           <use xlink:href="{% static 'assets/icons/coreui/sprites/free.svg' %}#cil-drop"></use>
         </svg> Estoques</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="">
+      <a class="nav-link" href="{% url 'estoque:produto_list' %}">
         <svg class="nav-icon">
           <use xlink:href="{% static 'assets/icons/coreui/sprites/free.svg' %}#cil-drop"></use>
         </svg> Produtos</a>
