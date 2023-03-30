@@ -1,15 +1,15 @@
 from django.urls import include, path
 
-from backend.cliente import views as v
+from backend.endereco import views as v
 
-app_name = 'cliente'
+app_name = 'endereco'
 
 
-cliente_urlpatterns = [
-    path('', v.cliente_list, name='cliente_list'),
+endereco_urlpatterns = [
+    path('', v.endereco_list, name='endereco_list'),
 ]
 
 
 urlpatterns = [
-    path('', include(cliente_urlpatterns)),
+    path('', include(endereco_urlpatterns)),
 ]

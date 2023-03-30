@@ -11,5 +11,6 @@ urlpatterns = [
     path('', include('backend.core.urls', namespace='core')),
     path('cliente/', include('backend.cliente.urls', namespace='cliente')),
     path('departamento/', include('backend.departamento.urls', namespace='departamento')),
+    path('endereco/', include('backend.endereco.urls', namespace='endereco')),
     path('admin/', admin.site.urls),
 ]
