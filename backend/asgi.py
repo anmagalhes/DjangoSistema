@@ -1,5 +1,5 @@
 """
-ASGI config for sistema_Intranete_Suelo project.
+ASGI config for backend project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -12,7 +12,7 @@ import os
 from django.core.asgi import get_asgi_application
 
 os.environ.setdefault(
-    'DJANGO_SETTINGS_MODULE', 'sistema_Intranete_Suelo.settings'
+    'DJANGO_SETTINGS_MODULE', 'backend.settings'
 )
 
 application = get_asgi_application()
