@@ -8,6 +8,6 @@ admin.site.index_title = 'Cadastro Admin'
 
 urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),
-    # path('', include('core.urls')),
+    path('', include('backend.core.urls', namespace='core')),
     path('admin/', admin.site.urls),
 ]

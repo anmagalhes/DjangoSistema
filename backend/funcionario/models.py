@@ -1,6 +1,7 @@
-from backend.departamento.models import Departamento
 from django.contrib.auth.models import User
 from django.db import models
+
+from backend.departamento.models import Departamento
 
 STATUS_SITUACAO = [
     ('A', 'Ativo'),
