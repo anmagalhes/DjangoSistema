@@ -1,6 +1,5 @@
 from django.db import models
 
-
 LOGRADOURO_CHOICES = [
     ('Rua', 'Rua'),
     ('Avenida', 'Avenida'),
@@ -41,6 +40,8 @@ ESTADO_CHOICES = [
 ]
 
 # Create your models here.
+
+
 class Endereco(models.Model):
     Logradouro = models.CharField(
         'Logradouro',

@@ -1,7 +1,8 @@
-from django.shortcuts import render, redirect
-from cliente.models import *
-from cliente.forms import *
 import datetime
+
+from cliente.forms import *
+from cliente.models import *
+from django.shortcuts import redirect, render
 
 
 def cadastrar_cliente(request):

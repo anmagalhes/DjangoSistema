@@ -1,6 +1,5 @@
 from django.db import models
 
-
 STATUS_SITUACAO = [
     ('A', 'Ativo'),
     ('I', 'Inativo'),
