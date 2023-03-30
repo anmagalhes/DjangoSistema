@@ -89,7 +89,7 @@ class Funcionario(models.Model):
         return self.nome
 
 
-class DocumentosRH(models.Model):
+class Documento(models.Model):
     descricao = models.CharField(
         'Nome do documento',
         help_text='Nome do documento completo',

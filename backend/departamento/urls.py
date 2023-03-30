@@ -7,6 +7,7 @@ app_name = 'departamento'
 
 departamento_urlpatterns = [
     path('', v.departamento_list, name='departamento_list'),
+    path('create/', v.DepartamentoCreateView.as_view(), name='departamento_create'),  # noqa E501
 ]
 
 
