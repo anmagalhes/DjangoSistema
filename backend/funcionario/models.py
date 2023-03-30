@@ -89,7 +89,7 @@ class Funcionario(models.Model):
         return self.nome
 
 
-class Documentosrh(models.Model):
+class DocumentosRH(models.Model):
     descricao = models.CharField(
         'Nome do documento',
         help_text='Nome do documento completo',
@@ -104,7 +104,7 @@ class Documentosrh(models.Model):
         return self.descricao
 
 
-class HoraExtra_Funcionario(models.Model):
+class HoraExtraFuncionario(models.Model):
     motivo = models.CharField(
         'Motivo Hora Extra',
         help_text='Nome do Motivo Hora extrar',

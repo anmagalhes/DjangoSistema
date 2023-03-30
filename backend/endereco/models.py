@@ -39,8 +39,6 @@ ESTADO_CHOICES = [
     ('TO', 'TO'),
 ]
 
-# Create your models here.
-
 
 class Endereco(models.Model):
     logradouro = models.CharField(
