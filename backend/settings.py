@@ -1,22 +1,13 @@
 from pathlib import Path
+from decouple import Csv, config
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+SECRET_KEY = config('SECRET_KEY')
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
+DEBUG = config('DEBUG', default=False, cast=bool)
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = (
-    'django-insecure-#u92u^s#wac5z86jrf-f3-z3jb^k&o+%sq_#=7&#9tg1lem&zm'
-)
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', default=[], cast=Csv())
 
 AUTH_USER_MODEL = 'myauth.User'
 
