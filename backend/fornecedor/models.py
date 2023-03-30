@@ -71,7 +71,6 @@ class Fornecedor(models.Model):
         default='A',
     )
 
-
-class Meta:
-    verbose_name = 'Fornecedors'
-    verbose_name_plural = 'Fornecedores'
+    class Meta:
+        verbose_name = 'Fornecedor'
+        verbose_name_plural = 'Fornecedores'

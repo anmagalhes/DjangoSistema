@@ -6,6 +6,10 @@ class Categoria(models.Model):
         'Nome Categoria', help_text='Nome Completo Catergoria', max_length=40
     )
 
+    class Meta:
+        verbose_name = 'categoria'
+        verbose_name_plural = 'categorias'
+
     def __str__(self):
         return self.Categoria.titulo
 
@@ -24,6 +28,10 @@ class Produto(models.Model):
         help_text='Quantidade produto, Sem traços ou pontos',
         default=0,
     )
+
+    class Meta:
+        verbose_name = 'produto'
+        verbose_name_plural = 'produtos'
 
     def __str__(self):
         return self.produto.nome

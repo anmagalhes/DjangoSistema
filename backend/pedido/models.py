@@ -20,9 +20,12 @@ class Pedido(models.Model):
         null=False,
     )
 
+    class Meta:
+        verbose_name = 'pedido'
+        verbose_name_plural = 'pedidos'
 
-def __str__(self) -> str:
-    return f'Pedido N. {self.pk}'
+    def __str__(self) -> str:
+        return f'Pedido N. {self.pk}'
 
 
 class Itempedido(models.Model):
@@ -33,11 +36,9 @@ class Itempedido(models.Model):
     quantidade_Material = models.PositiveIntegerField()
     imagem = models.CharField(max_length=2000)
 
+    class Meta:
+        verbose_name = 'item do pedido'
+        verbose_name_plural = 'itens do pedido'
 
-def __str__(self) -> str:
-    return f'item do {self.pedido}'
-
-
-class Meta:
-    verbose_name = 'item do pedidos'
-    verbose_name_plural = 'itens dos pedidos'
+    def __str__(self) -> str:
+        return f'item do {self.pedido}'

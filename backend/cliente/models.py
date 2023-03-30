@@ -78,5 +78,9 @@ class Cliente(models.Model):
         default='A',
     )
 
+    class Meta:
+        verbose_name = 'cliente'
+        verbose_name_plural = 'clientes'
+
     def __str__(self):
         return self.nome

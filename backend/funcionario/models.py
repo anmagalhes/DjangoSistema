@@ -12,7 +12,6 @@ SEXO_CHOICES = [('M', 'Masculino'), ('F', 'Feminino'), ('O', 'Outros')]
 
 
 class Funcionario(models.Model):
-
     nome = models.CharField(
         'Nome do cliente', help_text='Nome Completo do Cliente', max_length=80
     )
@@ -83,9 +82,11 @@ class Funcionario(models.Model):
 
     class Meta:
         ordering = ['nome']
+        verbose_name = 'funcionário'
+        verbose_name_plural = 'funcionários'
 
     def __str__(self):
-        return self.Funcioanrio.nome
+        return self.nome
 
 
 class Documentosrh(models.Model):
@@ -95,11 +96,14 @@ class Documentosrh(models.Model):
         max_length=100,
     )
 
+    class Meta:
+        verbose_name = 'documento'
+        verbose_name_plural = 'documentos'
+
     def __str__(self):
-        return self.Documentosrh.descricao
+        return self.descricao
 
 
-# Create your models here.
 class HoraExtra_Funcionario(models.Model):
     motivo = models.CharField(
         'Motivo Hora Extra',
@@ -117,7 +121,6 @@ class HoraExtra_Funcionario(models.Model):
         default='Rua',
     )
 
-
-class Meta:
-    verbose_name = 'funcionario'
-    verbose_name_plural = 'funcionarios'
+    class Meta:
+        verbose_name = 'hora extra'
+        verbose_name_plural = 'horas extra'

@@ -8,11 +8,9 @@ class Departamento(models.Model):
         max_length=80,
     )
 
+    class Meta:
+        verbose_name = 'departamento'
+        verbose_name_plural = 'departamentos'
 
-def __str__(self):
-    return self.Departamento.nome
-
-
-class Meta:
-    verbose_name = 'departamento'
-    verbose_name_plural = 'departamentos'
+    def __str__(self):
+        return self.nome
