@@ -51,11 +51,12 @@
       <a class="dropdown-item" href="#">
         <svg class="icon me-2">
           <use xlink:href="{% static 'assets/icons/coreui/sprites/free.svg' %}#cil-lock-locked"></use>
-        </svg> Lock Account</a><a class="dropdown-item" href="#">
-          <svg class="icon me-2">
-            <use xlink:href="{% static 'assets/icons/coreui/sprites/free.svg' %}#cil-account-logout"></use>
-          </svg> Logout
-        </a>
+        </svg> Lock Account</a>
+      <a class="dropdown-item" href="{% url 'logout' %}">
+        <svg class="icon me-2">
+          <use xlink:href="{% static 'assets/icons/coreui/sprites/free.svg' %}#cil-account-logout"></use>
+        </svg> Sair
+      </a>
     </div>
   </li>
 </ul>
