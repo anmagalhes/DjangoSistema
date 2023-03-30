@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "base_dashboard.html" %}
 
 {% load static %}
 
@@ -11,10 +11,4 @@
   {% include "dashboard/social.html" %}
   <!-- Traffic & Sales -->
   {% include "dashboard/traffic_sales.html" %}
-  <!-- Items -->
-  {% include "dashboard/table.html" %}
 {% endblock content %}
-
-{% block js %}
-  <script src="{% static 'js/main.js' %}"></script>
-{% endblock js %}

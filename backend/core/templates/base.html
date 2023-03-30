@@ -60,16 +60,16 @@
     {% block css %}{% endblock css %}
   </head>
   <body>
-    { include "includes/sidebar.html" %}
+    {% include "includes/sidebar.html" %}
     <div class="wrapper d-flex flex-column min-vh-100 bg-light">
       <header class="header header-sticky mb-4">
-        { include "includes/navbar.html" %}
+        {% include "includes/navbar.html" %}
         <div class="header-divider"></div>
         <div class="container-fluid">
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb my-0 ms-2">
               {% block breadcrumb %}
-                { include "includes/breadcrumb/breadcrumb_dashboard.html" %}
+                {% include "includes/breadcrumb/breadcrumb_dashboard.html" %}
               {% endblock breadcrumb %}
             </ol>
           </nav>
@@ -87,7 +87,7 @@
           {% endblock content %}
         </div>
       </div>
-      { include "includes/footer.html" %}
+      {% include "includes/footer.html" %}
     </div>
     <!-- CoreUI and necessary plugins-->
     <script src="{% static 'js/coreui.bundle.min.js' %}"></script>
